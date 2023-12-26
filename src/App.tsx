@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC } from 'react';
+import { Grid } from '@mui/material';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import Footer from './components/Footer';
+import mainImage from './images/main.png';
+import Pages from './components/Pages';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface IProps {
+  children: React.ReactNode;
 }
+
+const App: FC<IProps> = ({ children }) => {
+  return (
+    <Grid
+      container
+      sx={{
+        maxWidth: '1570px',
+        margin: '0 auto',
+        color: 'white',
+      }}
+    >
+      <Grid
+        container
+        spacing={2}
+        sx={{
+          backgroundImage: `url(${mainImage})`,
+          backgroundPosition: '50% 0',
+          backgroundRepeat: 'no-repeat',
+          backgroundColor: '#000',
+        }}
+      >
+        <Header />
+        <Nav />
+        {children}
+        <Pages />
+        <Footer />
+      </Grid>
+    </Grid>
+  );
+};
 
 export default App;
