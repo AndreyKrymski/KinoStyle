@@ -1,46 +1,13 @@
-# Getting Started with Create React App
+# Описание
+Добро пожаловать на наш инновационный сайт поиска и просмотра видео! Мы используем передовые технологии, такие как React, Redux, и React Router DOM, чтобы предоставить вам непревзойденный опыт взаимодействия с миром видео контента.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+С нашим удобным и мощным поиском, вы легко найдете любимые фильмы, сериалы, и видеоролики. Мы предоставляем широкий спектр категорий, обширную базу данных и умный алгоритм подбора, чтобы удовлетворить ваши интересы и предпочтения.
 
-## Available Scripts
+Наши страницы поиска оснащены интуитивно понятным пользовательским интерфейсом, который делает поиск максимально удобным. Благодаря React Router DOM, вы можете свободно перемещаться между страницами без необходимости перезагрузки, обеспечивая плавный и беззамедлительный опыт просмотра.
 
-In the project directory, you can run:
+Мы также внедрили Redux для эффективного управления состоянием приложения, обеспечивая стабильность и моментальную отзывчивость. Это позволяет нам создавать динамичные и инновационные функции, которые делают ваш опыт просмотра еще более увлекательным.
 
-### `npm start`
+Присоединяйтесь к нам, чтобы погрузиться в захватывающий мир видео контента, где передовые технологии встречаются с лучшими произведениями искусства и развлечений. Откройте для себя удовольствие от просмотра видео с легкостью и удовольствием на нашем современном и интуитивно понятном сайте!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Попробовать
+https://kino-style.vercel.app
