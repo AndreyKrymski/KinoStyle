@@ -11,3 +11,6 @@
 
 # Попробовать
 https://kino-style.vercel.app
+
+<br>
+![alt text](./src/images/kino-style.vercel.app_.png)
