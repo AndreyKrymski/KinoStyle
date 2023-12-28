@@ -5,11 +5,9 @@ import { filmsProps } from '../redux/filmsProps';
 import { useAppSelector } from '../redux/store';
 import TitleContent from './TitleContent';
 
+
 const Search: React.FC = () => {
-  const searchState = useAppSelector((state) => state.search);
   const { searchData, keyward } = useAppSelector((state) => state.search);
-  console.log(searchState);
-  console.log(keyward);
   const title =
     searchData.total === 0
       ? 'По вашему запросу ничего не найдено'

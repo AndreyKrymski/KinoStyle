@@ -66,7 +66,10 @@ const Pages = () => {
           sm: '5px 40px',
           xs: '5px 16px',
         },
-        gap: '12px',
+        gap: {
+          xs: '4px',
+          sm: '12px',
+        },
         display:
           searchData.totalPages === null || searchData.totalPages === 0
             ? 'none'

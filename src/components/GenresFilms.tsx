@@ -30,7 +30,7 @@ const GenresFilms: FC<GenresFilmsProps> = ({ title, api }) => {
             lg: '0px 124px',
             md: '0px 54px',
             sm: '0px 26px',
-            xs: '0px 2px',
+            xs: '0px',
           },
         }}
       >

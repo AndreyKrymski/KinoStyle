@@ -47,7 +47,7 @@ const Header = () => {
         lg: 38,
         md: 23,
         sm: 19,
-        xs: 10
+        xs: 10,
       }}
       p={2}
     >
@@ -83,7 +83,6 @@ const Header = () => {
       </Grid>
       <Grid
         item
-        lg={6}
         md={6}
         sm={4.4}
         xs={12}
@@ -134,7 +133,6 @@ const Header = () => {
         </Paper>
       </Grid>
       <Grid
-        lg={3}
         md={3}
         sm={4.5}
         xs={6}
@@ -144,16 +142,27 @@ const Header = () => {
         alignItems="center"
         sx={{
           color: '#f90',
-          fontSize: '20px',
+          fontSize: {
+            xs: '18px',
+            md: '20px',
+          },
           fontFamily: 'Graduate,cursive',
-          justifyContent: { xs: 'flex-end', sm: 'center' },
+          justifyContent: { xs: 'center', sm: 'center' },
         }}
       >
-        <Grid item mr={1} p={1}>
+        <Grid item>
           <Link href="#" underline="none">
             <Typography
               variant="h6"
               sx={{
+                padding: {
+                  xs: '8px 8px 8px',
+                  md: '8px',
+                },
+                marginRight: {
+                  xs: '0px',
+                  md: '8px',
+                },
                 color: '#f90',
                 fontFamily: 'Graduate,cursive',
                 transition: 'all 0.4s',
@@ -170,7 +179,7 @@ const Header = () => {
             </Typography>
           </Link>
         </Grid>
-        <Grid item p={1}>
+        <Grid item>
           <Link href="#" underline="none">
             <Typography
               variant="h6"
@@ -178,6 +187,10 @@ const Header = () => {
                 color: '#f90',
                 fontFamily: 'Graduate,cursive',
                 transition: 'all 0.4s',
+                padding: {
+                  xs: '8px 0px',
+                  md: '8px',
+                },
                 fontSize: {
                   xs: '18px',
                   md: '20px',

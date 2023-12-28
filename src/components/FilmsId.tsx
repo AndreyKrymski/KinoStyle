@@ -15,6 +15,7 @@ import { useEffect } from 'react';
 import { searchReset } from '../redux/slices/searchSlice';
 import { filmName, filmReset, setFilmImage } from '../redux/slices/FilmSlice';
 import { useParams } from 'react-router-dom';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 interface FilmsIdProps {
   title?: string;
@@ -22,13 +23,9 @@ interface FilmsIdProps {
 }
 
 const FilmsId: FC<FilmsIdProps> = () => {
+  const theme = useTheme();
+  const maxRating = useMediaQuery(theme.breakpoints.down('sm')) ? 5 : 10;
   const { id } = useParams();
-  console.log(id)
-    const searchState = useAppSelector((state) => state.search);
-    const {  keyward } = useAppSelector((state) => state.search);
-    console.log(searchState);
-    console.log(keyward);
-
   const dispatch = useAppDispatch();
   const formatFilmLength = (lengthInMinutes: number) => {
     const hours = Math.floor(lengthInMinutes / 60);
@@ -77,8 +74,6 @@ const FilmsId: FC<FilmsIdProps> = () => {
           sm: '10px 40px 0px',
           xs: '10px 16px 0px',
         },
-
-        minHeight: '500px',
       }}
     >
       <Grid item xl={12}>
@@ -107,7 +102,7 @@ const FilmsId: FC<FilmsIdProps> = () => {
           <img
             src={filmData?.posterUrl}
             alt="notFound"
-            style={{ width: '100%', height: '100%' }}
+            style={{ width: '100%', height: 'auto' }}
           />
         )}
       </Grid>
@@ -223,9 +218,8 @@ const FilmsId: FC<FilmsIdProps> = () => {
               sx={{
                 padding: { sm: '10px 0', xs: '5px 0' },
                 display: 'flex',
-                gap: '10px',
                 alignItems: 'center',
-
+                gap: '10px',
                 fontSize: {
                   md: '18px',
                   sm: '16px',
@@ -237,12 +231,13 @@ const FilmsId: FC<FilmsIdProps> = () => {
               <Rating
                 name="read-only"
                 value={filmData?.ratingKinopoisk}
-                max={10}
+                max={maxRating}
                 readOnly
                 precision={0.5}
                 sx={{
                   display: 'flex',
                   justifyContent: 'center',
+                  alignItems: 'center',
                   fontSize: '20px',
                   background: 'inherit',
                   '& .MuiRating-icon': {
@@ -277,7 +272,7 @@ const FilmsId: FC<FilmsIdProps> = () => {
           <ImageList
             style={{ gridTemplateColumns: 'revert-layer', gap: 'revert-layer' }}
             sx={{
-              width: '100%',
+              maxWidth: '100%',
               overflowX: 'hidden',
               margin: 0,
 

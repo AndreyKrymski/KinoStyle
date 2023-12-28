@@ -22,7 +22,6 @@ const App: FC<IProps> = ({ children }) => {
     >
       <Grid
         container
-        spacing={2}
         sx={{
           backgroundImage: `url(${mainImage})`,
           backgroundPosition: '50% 0',
